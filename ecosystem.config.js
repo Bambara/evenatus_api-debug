@@ -1,0 +1,50 @@
+module.exports = {
+  apps: [
+    {
+      name: "evenatus_api",
+      script: "server.js",
+      watch: false,
+      merge_logs: false,
+      wait_ready: true,
+      time: true,
+      pid_file: "./pids/evenatus_api.log",
+      out_file: "./logs/evenatus_api.log",
+      error_file: "./errors/evenatus_api.log",
+      log_date_format: "YYYY-MM-DD HH:mm:ss SSS",
+      // cwd: "/home/apexzonedemo/taxiapp/snapbackend",
+      env: {
+        PORT: "8085",
+        DB_URL_DEV:
+          "mongodb+srv://binary:qtjDzYj7AnXNsUry@clusterdemo.nc9mf7o.mongodb.net/evenatus_db?retryWrites=true&w=majority",
+        MSPACE_APP_VERSION: "1.0",
+        MSPACE_APP_ID: "APP_008027",
+        MSPACE_APP_PASS: "809c4e71f98a597c4a7c77843b78b540",
+        MSPACE_APP_SOURCE: "evenatus",
+      },
+    },
+    // {
+    //   name: "admin_socket",
+    //   script: "admin_socket.js",
+    //   watch: true,
+    //   merge_logs: true,
+    //   wait_ready: true,
+    //   // cwd: "/home/apexzonedemo/taxiapp/snapbackend",
+    // },
+    // {
+    //   name: "driver_socket",
+    //   script: "driver_socket.js",
+    //   watch: true,
+    //   merge_logs: true,
+    //   wait_ready: true,
+    //   // cwd: "/home/apexzonedemo/taxiapp/snapbackend",
+    // },
+    // {
+    //   name: "passenger_socket",
+    //   script: "passenger_socket.js",
+    //   watch: true,
+    //   merge_logs: true,
+    //   wait_ready: true,
+    //   // cwd: "/home/apexzonedemo/taxiapp/snapbackend",
+    // },
+  ],
+};
